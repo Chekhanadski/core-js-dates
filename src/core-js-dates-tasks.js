@@ -34,8 +34,16 @@ dateToTimestamp('04 Dec 1995 00:12:00 UTC');
  * Date(2023, 5, 1, 8, 20, 55) => '08:20:55'
  * Date(2015, 10, 20, 23, 15, 1) => '23:15:01'
  */
-function getTime(/* date */) {
-  throw new Error('Not implemented');
+function getTime(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+
+  hours = (hours < 10 ? '0' : '') + hours;
+  minutes = (minutes < 10 ? '0' : '') + minutes;
+  seconds = (seconds < 10 ? '0' : '') + seconds;
+
+  return `${hours}:${minutes}:${seconds}`;
 }
 
 /**
