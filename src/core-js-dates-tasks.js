@@ -23,7 +23,7 @@ function dateToTimestamp(date) {
   return millisecondsPassed;
 }
 
-console.log(dateToTimestamp('04 Dec 1995 00:12:00 UTC'));
+dateToTimestamp('04 Dec 1995 00:12:00 UTC');
 /**
  * Returns the time in hh:mm:ss format from the received date.
  *
